@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#00f">
+
+	<ImageButton
+		android:id="@+id/button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#000"
+		android:padding="8dp"
+		android:src="@android:drawable/ic_dialog_dialer"
+		app:layout_constraintBottom_toTopOf="@+id/redPanel"
+		app:layout_constraintStart_toStartOf="parent"/>
+
+	<EditText
+		android:id="@+id/editText"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_above="@+id/redPanel"
+		android:background="#fff"
+		android:padding="16dp"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toTopOf="@+id/redPanel"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/button"
+		app:layout_constraintTop_toTopOf="@+id/button">
+
+		<requestFocus/>
+	</EditText>
+
+	<FrameLayout
+		android:id="@+id/redPanel"
+		android:layout_width="0dp"
+		android:layout_height="250dp"
+		android:background="#f00"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:visibility="visible"/>
+
+</android.support.constraint.ConstraintLayout>
